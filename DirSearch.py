@@ -192,7 +192,7 @@ async def append_url(add_url):
 
 
 async def conn_db(loop):
-    async with aiomysql.create_pool(host='localhost',port=3306,user='root',password='sws12300303',db='dir',loop=loop) as pool:
+    async with aiomysql.create_pool(host='localhost',port=3306,user='root',password='密码',db='字典数据库名',loop=loop) as pool:
         async with pool.acquire() as conn:
             async with conn.cursor() as cursor:
                 await cursor.execute('select dir_name from test order by count desc')
@@ -206,7 +206,7 @@ async def conn_db(loop):
 
 
 async def update_db(alive_path):
-    async with aiomysql.create_pool(host='localhost', port=3306, user='root', password='sws12300303', db='dir',
+    async with aiomysql.create_pool(host='localhost', port=3306, user='root', password='密码', db='字典数据库名',
                                     loop=loop) as pool:
         async with pool.acquire() as conn:
             async with conn.cursor() as cursor:
