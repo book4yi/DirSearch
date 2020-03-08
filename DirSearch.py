@@ -98,6 +98,16 @@ async def scan(url, sem):
                                     if title2:
                                         title2 = title2.group()
                                         title2 = title2.strip('>').strip('</title')
+                                if resp2.url == url + '/' and status2 == 404:
+                                    url2 = url2 + '/' + random_str
+                                    async with session.get(url=url2, headers=headers, allow_redirects=False, 
+                                                           verify_ssl=False, timeout=15) as resp4:
+                                        if resp4.status == 404:
+                                            print(Fore.GREEN+url+'  ---> 此目录多半存在')
+                                            maybe_alive_list.add(url + "\t%d\t%s\n" % (status2, title2))
+                                            if r_scan:
+                                                urls2.append(url)
+                                                await append_url(url)      
                                 if resp3.url != resp2.url and status2 == 200:
                                     if "404.css" in text2 or "404.js" in text2 or "404.html" in text2 or "404" in text2 or \
                                             "not found" in text2 or "找不到页面" in text2 or "error" in text2:
