@@ -21,10 +21,15 @@ optional arguments:
   -o　OUTPUT,　--output　OUTPUT  
   　　　　　　　　　　　　The location of the results  
   -r,　--recursive　　　　Recursive scan  
-  
+
+## 举例：
+对target.txt的url进行目录探测，对存在的目录进行递归扫描，结果存放在result下的baidu子目录中。
+>python DirSearch.py -t c:\target.txt -o baidu -r
+
 ## 说明：
 - 文件中的url要以http或https开头，默认以http协议进行访问  
 - 要把数据字典提前写入mysql数据库中，字段名分别为dir_name，count,可自行更改
+- 结果默认存放result文件夹中当中
 
 ## 脚本判断依据：
 目标url拼接字典后，通过python自动化脚本，建立A、B、C共3个列表。  
