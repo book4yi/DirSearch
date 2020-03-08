@@ -1,0 +1,9 @@
+asyncio
+argparse
+aiohttp
+aiomysql
+opnieuw
+difflib
+colorama
+
+
