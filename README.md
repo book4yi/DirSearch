@@ -28,8 +28,10 @@ optional arguments:
 
 ## 说明：
 - 文件中的url要以http或https开头，否则默认以http协议进行访问  
-- 要把数据字典提前写入mysql数据库中，字段名分别为dir_name，count,可自行更改
 - 结果默认存放result文件夹中当中
+- 要把数据字典提前写入mysql数据库中，字段名分别为dir_name，count,可自行更改  
+![](https://upload-images.jianshu.io/upload_images/21474770-7740231f37caec52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+
 
 ## 脚本判断依据：
 目标url拼接字典后，通过python自动化脚本，建立A、B、C共3个列表。  
