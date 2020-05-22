@@ -9,7 +9,7 @@ DirSearch是一款探测网站路径的工具,批量扫描网站的路径(目录
 ## 依存关系：  
 ```
 运行环境：python3.8
-安装所需依赖库：pip install requirement.txt
+安装所需依赖库：requirement.txt
 ```
 
 ## 用法：
